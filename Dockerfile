@@ -1,6 +1,6 @@
 FROM python:3.11
 
-WORKDIR /USER_API
+WORKDIR /USER_API/app
 
 COPY requirements.txt .
 
