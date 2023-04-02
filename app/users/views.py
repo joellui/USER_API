@@ -1,6 +1,6 @@
 from flask import jsonify, request
 from flask.views import MethodView
-from users.controller import UserController
+from app.users.controller import UserController
 
 class PingView(MethodView):
     def get(self):

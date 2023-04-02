@@ -1,9 +1,8 @@
 from flask import Flask
 from flask_restful import Api
-from users.views import UserListView, UserDetailView, PingView
+from app.users.views import UserListView, UserDetailView, PingView
 
 app = Flask(__name__)
-app.config.from_pyfile('config.py')
 api = Api(app)
 
 api.add_resource(PingView, '/')

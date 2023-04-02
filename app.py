@@ -12,7 +12,7 @@ def ping():
     return jsonify({'message': 'pong'})
 
 # create user
-@app.route('/user', methods=['POST'])
+@app.route('/users', methods=['POST'])
 def create_user():
     data = request.json
     email = data.get('email')
@@ -36,7 +36,7 @@ def get_all_users():
     return jsonify(result), 200
 
 # get user by id
-@app.route('/user/<id>', methods=['GET'])
+@app.route('/users/<id>', methods=['GET'])
 def get_user_by_id(id):
     user = db.users.find_one({'_id': ObjectId(id)})
     if user:
@@ -44,7 +44,7 @@ def get_user_by_id(id):
         return jsonify(result), 200
     
 # update user by id
-@app.route('/user/<id>', methods=['PUT'])
+@app.route('/users/<id>', methods=['PUT'])
 def update_user_by_id(id):
     data = request.json
     result = db.users.update_one({'_id': ObjectId(id)}, {'$set': data})
@@ -57,7 +57,7 @@ def update_user_by_id(id):
     return jsonify(message), code
 
 # delete user by id
-@app.route('/user/<id>', methods=['DELETE'])
+@app.route('/users/<id>', methods=['DELETE'])
 def delete_user_by_id(id):
     result = db.users.delete_one({'_id': ObjectId(id)})
     if result.deleted_count > 0:

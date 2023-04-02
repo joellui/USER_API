@@ -1,6 +1,6 @@
 from pymongo import MongoClient
 from bson.objectid import ObjectId
-from config import MONGO_URI
+from app.config import MONGO_URI
 
 client = MongoClient(MONGO_URI)
 db = client['userDB']
