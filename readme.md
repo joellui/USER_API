@@ -40,11 +40,12 @@ This will satrt the application on  http://localhost:5000.
 ## REST API Endpoints
 The following REST API endpoints are provided by the application:
 
+- **GET /** - Ping router test Ping --> pong
 - **GET /users** - Returns a list of all users.
-- **GET /user/\<id>** - Returns the user with the specified ID.
-- **POST /user** - Creates a new user with the specified data.
-- **PUT /user/\<id>** - Updates the user with the specified ID with the new data.
-- **DELETE /user/\<id>** - Deletes the user with the specified ID.
+- **GET /users/\<id>** - Returns the user with the specified ID.
+- **POST /users** - Creates a new user with the specified data.
+- **PUT /users/\<id>** - Updates the user with the specified ID with the new data.
+- **DELETE /users/\<id>** - Deletes the user with the specified ID.
 
 ## Example Requests and Responses
 
@@ -75,7 +76,7 @@ Response
 
 ```
 
-### GET /user/\<id>
+### GET /users/\<id>
 Request
 
 ```bash
